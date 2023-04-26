@@ -2,7 +2,7 @@ const auditoriums = [
     {
         id: 1,
         name: 'Auditorium 1',
-        capacity: 120,
+        capacity: 130,
         location: 'Building A, Floor 1',
         description:
             'Auditorium 1 is a spacious and modern venue located in Building A, Floor 1. With a capacity of 120 people, it is perfect for large meetings and events. Equipped with state-of-the-art audiovisual equipment, this auditorium provides an excellent experience for attendees.',

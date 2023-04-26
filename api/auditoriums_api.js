@@ -20,9 +20,15 @@ async function createAuditorium(data) {
     }
 }
 
-async function fetchAuditoriumById(id) {
+async function fetchAuditoriumById(id, email, password) {
+    const credentials = btoa(`${email}:${password}`);
+
     try {
-        const data = await api.get(`auditorium/search/${id}/`);
+        const data = await api.get(`auditorium/search/${id}/`, [
+            {
+                Authorization: `Basic ${credentials}`,
+            },
+        ]);
         return data;
     } catch (error) {
         console.error(error);

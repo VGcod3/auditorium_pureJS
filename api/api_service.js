@@ -13,8 +13,6 @@ class Api {
             ...customHeaders
         );
 
-        console.log(headers);
-
         try {
             const response = await fetch(`${this.baseURL}${endpoint}`, {
                 headers,
