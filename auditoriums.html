@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auditorium List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      input[type="password"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      ::-ms-reveal {
+        display: none;
+      }
+    </style>
+    <div
+      class="d-flex flex-column justify-content-between"
+      style="min-height: 100vh"
+    >
+      <!-- <header class="bg-light navbar-light">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <b>
+              <a class="navbar-brand" href="index.html"
+                >Auditorium Reservation</a
+              >
+            </b>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="auditoriums.html"
+                    >Auditoriums</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link btn btn-light mx-sm-1 my-1 my-lg-0"
+                    href="login.html"
+                  >
+                    Login
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link btn mx-md-1 my-1 my-md-0 text-light btn-primary"
+                    href="register.html"
+                    >Register</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header> -->
+      <header class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+          <a class="navbar-brand" href="index.html">Auditorium Reservation</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="auditoriums.html"
+                  >Auditoriums</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-light mx-sm-1 my-1 my-lg-0"
+                  href="login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-md-1 my-1 my-md-0" href="register.html">
+                  <button class="btn btn-primary w-100">Register</button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="flex-grow-1 container">
+        <h2 class="text-center mb-4">Auditoriums</h2>
+
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Auditorium Name</th>
+              <th scope="col">Capacity</th>
+              <th scope="col">Location</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </main>
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="m-0">&copy; 2023 Auditorium Reservation</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a href="#" class="text-white">Terms of Service</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-white">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/render_scripts/table.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
