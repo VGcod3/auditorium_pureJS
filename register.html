@@ -65,25 +65,72 @@
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link btn btn-light mx-sm-1 my-1 my-lg-0"
+                                    class="nav-link btn btn-light mx-sm-1 my-1 my-lg-0 d-none"
+                                    id="loginButton"
                                     href="login.html"
                                     >Login</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link mx-md-1 my-1 my-md-0"
+                                    class="nav-link px-0 py-0"
                                     href="register.html"
                                 >
-                                    <button class="btn btn-primary w-100">
+                                    <button
+                                        class="btn btn-primary w-100 d-none"
+                                        id="registerButton"
+                                    >
                                         Register
                                     </button>
                                 </a>
+                            </li>
+                            <li class="nav-item dropdown" id="userDropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <img
+                                        class="rounded-circle me-2"
+                                        width="30"
+                                        height="30"
+                                        src="placeholder.jpg"
+                                        alt="Avatar"
+                                        id="userAvatar"
+                                    />
+                                    <span id="userEmail">Email</span>
+                                </a>
+                                <ul
+                                    class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="userDropdown"
+                                    id="userDropdown"
+                                >
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Profile</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            id="logoutButton"
+                                            >Logout</a
+                                        >
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>
+
+            <script></script>
             <main class="container flex-grow-1">
                 <div
                     class="row justify-content-center align-items-center py-5 my-3 rounded bg-light"
@@ -93,16 +140,6 @@
                             Register for Auditorium Reservation
                         </h2>
                         <form>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="username"
-                                    name="username"
-                                    required
-                                />
-                            </div>
                             <div class="form-group">
                                 <label for="firstname">First Name</label>
                                 <input
@@ -133,16 +170,7 @@
                                     required
                                 />
                             </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    id="phone"
-                                    name="phone"
-                                    required
-                                />
-                            </div>
+
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <div class="input-group mb-3">
@@ -164,6 +192,17 @@
                                         ></i>
                                     </button>
                                 </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <input
+                                    type="checkbox"
+                                    class="form-check-input"
+                                    id="isAdmin"
+                                    name="isAdmin"
+                                />
+                                <label class="form-check-label" for="isAdmin"
+                                    >Is Admin</label
+                                >
                             </div>
                             <button
                                 type="submit"

@@ -66,7 +66,7 @@ function renderAudPage() {
     container.appendChild(card);
 }
 
-const { email, password } = JSON.parse(localStorage.getItem('userData'));
+const { email, password } = JSON.parse(localStorage.getItem('user'));
 
 const auditorium = {
     name: localAuditorium.name,

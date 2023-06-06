@@ -14,9 +14,8 @@ loginForm.addEventListener('submit', async (event) => {
         const response = await loginUser(email, password);
 
         // Save user ID in local storage
-        console.log(response);
         localStorage.setItem(
-            'userData',
+            'user',
             JSON.stringify(Object.assign(response, { password }))
         );
 
